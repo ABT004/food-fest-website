@@ -1,30 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const token = localStorage.getItem('token');
+    const userName = localStorage.getItem('userName') || '';
+    const userEmail = localStorage.getItem('userEmail') || '';
+    const nameParts = userName.split(' ').filter(Boolean);
+
+    const firstName = document.getElementById('firstName');
     const lastName = document.getElementById('lastName');
     const email = document.getElementById('email');
     const confirmEmail = document.getElementById('confirmEmail');
     const loginMessage = document.getElementById('loginMessage');
     const confirmEmailLabel = document.getElementById('confirmEmailLabel');
     
-    if (token && userName) {
+    if (token) {
         if (loginMessage) {
             loginMessage.style.display = 'none';
         }
-        
+
         const firstNameValue = nameParts[0] || '';
         const lastNameValue = nameParts.slice(1).join(' ') || '';
-        
+
         if (firstName) {
-            firstName.parentElement.querySelector('label').style.display = 'none';
+            firstName.value = firstNameValue;
+            const label = firstName.parentElement.querySelector('label');
+            if (label) label.style.display = 'none';
         }
         if (lastName) {
             lastName.value = lastNameValue;
-            lastName.parentElement.querySelector('label').style.display = 'none';
-        if (email && userEmail) {
+            const label = lastName.parentElement.querySelector('label');
+            if (label) label.style.display = 'none';
+        }
+        if (email) {
             email.value = userEmail;
-            email.parentElement.querySelector('label').style.display = 'none';
+            const label = email.parentElement.querySelector('label');
+            if (label) label.style.display = 'none';
         }
         if (confirmEmail) {
-            confirmEmail.parentElement.querySelector('label').style.display = 'none';
+            confirmEmail.value = '';
+            confirmEmail.placeholder = 'Alternative Email (for ticket delivery)';
+            const label = confirmEmailLabel || confirmEmail.parentElement.querySelector('label');
+            if (label) label.style.display = 'none';
         }
     }
     
@@ -32,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const paymentOptions = document.querySelectorAll('.payment-option');
     let selectedPayment = null;
-paymentOptions.forEach(option => {
+    paymentOptions.forEach(option => {
         option.addEventListener('click', function() {
             paymentOptions.forEach(opt => opt.classList.remove('selected'));
             this.classList.add('selected');
@@ -107,6 +121,8 @@ function updateOrderSummary() {
     const orderId = sessionStorage.getItem('orderId');
     const totalAmount = sessionStorage.getItem('totalAmount');
     const eventName = sessionStorage.getItem('eventName');
+    const eventId = parseInt(sessionStorage.getItem('eventId'), 10);
+    const vipQty = parseInt(sessionStorage.getItem('vipQuantity') || '1', 10);
     
     const eventData = {
         1: { name: 'Tokha Food Fest', date: '8th & 9th January, 2026', vipPrice: 2500, normalPrice: 500 },
@@ -130,19 +146,20 @@ function updateOrderSummary() {
     }
     
     if (eventId && eventData[eventId]) {
-    const normalQty = sessionStorage.getItem('normalQuantity') || 2;
-    const vipPrice = eventData[eventId]?.vipPrice || 2500;
-    const normalPrice = eventData[eventId]?.normalPrice || 500;
-    
-    const vipTotal = vipQty * vipPrice;
-    const normalTotal = normalQty * normalPrice;
-    const total = vipTotal + normalTotal;
-    
-    const summaryItems = document.querySelectorAll('.summary-item');
-    if (summaryItems.length >= 3) {
-        summaryItems[0].innerHTML = `<span class="item-label">${vipQty} x VIP Ticket</span><span class="item-price">${vipTotal}</span>`;
-        summaryItems[1].innerHTML = `<span class="item-label">${normalQty} x Normal Ticket</span><span class="item-price">${normalTotal}</span>`;
-        summaryItems[2].innerHTML = `<span class="item-label">Total</span><span class="item-price">${total}</span>`;
+        const normalQty = parseInt(sessionStorage.getItem('normalQuantity') || '2', 10);
+        const vipPrice = eventData[eventId]?.vipPrice || 2500;
+        const normalPrice = eventData[eventId]?.normalPrice || 500;
+
+        const vipTotal = vipQty * vipPrice;
+        const normalTotal = normalQty * normalPrice;
+        const total = vipTotal + normalTotal;
+
+        const summaryItems = document.querySelectorAll('.summary-item');
+        if (summaryItems.length >= 3) {
+            summaryItems[0].innerHTML = `<span class="item-label">${vipQty} x VIP Ticket</span><span class="item-price">${vipTotal}</span>`;
+            summaryItems[1].innerHTML = `<span class="item-label">${normalQty} x Normal Ticket</span><span class="item-price">${normalTotal}</span>`;
+            summaryItems[2].innerHTML = `<span class="item-label">Total</span><span class="item-price">${total}</span>`;
+        }
     }
 }
 

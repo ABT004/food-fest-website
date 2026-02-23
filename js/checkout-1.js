@@ -11,47 +11,46 @@ const eventData = {
 
 document.addEventListener('DOMContentLoaded', function() {
     currentEventName = sessionStorage.getItem('eventName');
-    
+    currentEventId = parseInt(sessionStorage.getItem('eventId'), 10);
+
+    if (!Number.isInteger(currentEventId)) {
+        const fallbackName = document.getElementById('eventNameDisplay')?.textContent || '';
+        currentEventId = Object.keys(eventData).find(id => eventData[id].name === fallbackName) || 1;
+        currentEventId = parseInt(currentEventId, 10);
+    }
+
     updateEventDisplay();
-    
+
     const quantityButtons = document.querySelectorAll('.btn-quantity');
-quantityButtons.forEach(btn => {
+    quantityButtons.forEach(btn => {
         btn.addEventListener('click', function() {
             const ticketType = this.dataset.ticket;
             const isPlus = this.classList.contains('btn-plus');
 
             if (ticketType === 'vip') {
-                if (isPlus) {
-                    vipQuantity++;
-                } else {
-                    if (vipQuantity > 0) vipQuantity--;
-                }
+                vipQuantity = isPlus ? vipQuantity + 1 : Math.max(0, vipQuantity - 1);
                 document.getElementById('vipQty').textContent = vipQuantity;
                 updateSummary();
             } else if (ticketType === 'normal') {
-                if (isPlus) {
-                    normalQuantity++;
-                } else {
-                    if (normalQuantity > 0) normalQuantity--;
-                }
+                normalQuantity = isPlus ? normalQuantity + 1 : Math.max(0, normalQuantity - 1);
                 document.getElementById('normalQty').textContent = normalQuantity;
                 updateSummary();
             }
         });
     });
 
-
     const checkoutBtn = document.querySelector('.btn-checkout');
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', handleCheckout);
     }
-    
+
     updateSummary();
 });
 function updateEventDisplay() {
-    const event = eventData[currentEventId];
+    const event = eventData[currentEventId] || eventData[1];
     const eventDateDisplay = document.getElementById('eventDateDisplay');
-    
+
+    const eventNameDisplay = document.getElementById('eventNameDisplay');
     if (eventNameDisplay) {
         eventNameDisplay.textContent = currentEventName || event.name;
     }
@@ -61,8 +60,9 @@ function updateEventDisplay() {
 }
 
 function updateSummary() {
-    const event = eventData[currentEventId];
+    const event = eventData[currentEventId] || eventData[1];
     const vipPrice = event.vipPrice;
+    const normalPrice = event.normalPrice;
 
     const vipTotal = vipQuantity * vipPrice;
     const normalTotal = normalQuantity * normalPrice;

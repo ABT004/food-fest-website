@@ -55,6 +55,7 @@ food-fest-website/
 ### Prerequisites
 - Node.js (v14 or higher)
 - MySQL (v8 or higher)
+- XAMMP (Easy to Use)
 
 ### Installation
 
