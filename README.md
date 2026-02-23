@@ -32,7 +32,7 @@ food-fest-website/
 - Local storage used for session and user display data
 
 ### **Backend Features (Native Node.js - No Express Framework)**
-- Built using Node.js built-in `http` module (no Express.js framework)
+- Built using Node.js built-in `http` module
 - RESTful API structure with modular route handlers
 - MySQL database schema with users, events, orders, tickets, and returns
 - Volunteer application endpoint with database persistence
@@ -91,12 +91,3 @@ Open `html/index.html` in a browser or use a local server:
 # In project root
 npx http-server -c-1 -o
 ```
-
-## 📝 Important Note
-
-This project is built **without using any frameworks**:
-- Frontend: Pure HTML, CSS, and vanilla JavaScript (no React, Angular, Vue, etc.)
-- Backend: Native Node.js HTTP module (no Express.js, no Koa, no Fastify)
-- All routing, JSON parsing, and CORS handling done manually
-
-Perfect for educational purposes and understanding web fundamentals!
