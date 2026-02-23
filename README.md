@@ -39,6 +39,7 @@ food-fest-website/
 - Manual JSON parsing and routing
 - CORS headers configured manually
 
+
 ## 🎯 Key Features
 
 ✅ **No frameworks used** - Pure HTML/CSS/JS frontend, native Node.js backend  
