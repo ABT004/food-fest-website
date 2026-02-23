@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouddha Food Fest</title>
+    <link rel="stylesheet" href="/css/bouddha-events.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/html/index.html" class="logo">
+                <img src="/pictures/logo.png" alt="Food Jatra Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/html/events.html">Events</a></li>
+                <li><a href="/html/contact-us.html">Contact Us</a></li>
+                <li><a href="/html/about-us.html">About Us</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-ticket" onclick="window.location.href='/html/checkout-1.html'">Buy Ticket</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sliding Pictures -->
+    <section class="sliding-pictures">
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="slide"><img src="/pictures/1.jpg" alt="Food 1"></div>
+                <div class="slide"><img src="/pictures/2.jpg" alt="Food 2"></div>
+                <div class="slide"><img src="/pictures/3.jpg" alt="Food 3"></div>
+                <div class="slide"><img src="/pictures/4.jpg" alt="Food 4"></div>
+                <div class="slide"><img src="/pictures/5.jpg" alt="Food 5"></div>
+                <div class="slide"><img src="/pictures/1.jpg" alt="Food 1"></div>
+                <div class="slide"><img src="/pictures/2.jpg" alt="Food 2"></div>
+                <div class="slide"><img src="/pictures/3.jpg" alt="Food 3"></div>
+                <div class="slide"><img src="/pictures/4.jpg" alt="Food 4"></div>
+                <div class="slide"><img src="/pictures/5.jpg" alt="Food 5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <h1>Bouddha Food Fest</h1>
+        <p class="location">Bouddha, Kathmandu \ Near Bouddha Stupa</p>
+        <p class="date">15th & 16th January, 2026</p>
+        <p class="time">1 PM to 9 PM</p>
+        <button class="btn-buy-now" onclick="goToCheckout(4, 'Bouddha Food Fest')">Buy Tickets Now!!</button>
+    </section>
+
+    <!-- About the Festival -->
+    <section class="about-festival">
+        <h2>About the Festival</h2>
+        <p>The Boudha Street Food & Culture Fest is a relaxed, evening-focused food festival held around the iconic Boudhanath area. Blending local street food with international flavors, the festival creates a welcoming space for families, tourists, and food lovers to enjoy good food, soft music, and cultural experiences. With its peaceful atmosphere and vibrant surroundings, the event offers a unique food festival experience in one of Kathmandu's most popular cultural hubs.</p>
+    </section>
+
+    <!-- Ticket Options -->
+    <section class="ticket-section">
+        <h2>Ticket Option and Price</h2>
+        <div class="ticket-grid">
+            <div class="ticket-card">
+                <h3>VIP Ticket: Rs.2500</h3>
+                <ul>
+                    <li>2 Complementary Drinks.</li>
+                    <li>5 Food Coupons Worth 200 each.</li>
+                    <li>Free Parking.</li>
+                    <li>Entry Pass.</li>
+                </ul>
+            </div>
+            <div class="ticket-card">
+                <h3>Normal Ticket: Rs.500</h3>
+                <ul>
+                    <li>2 Food Coupons Worth 100 each.</li>
+                    <li>Entry Pass.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- All The Details -->
+    <section class="details-section">
+        <h2>All The Details</h2>
+        <h3>What to Expect</h3>
+        <ul class="details-list">
+            <li>Popular Nepali street foods (Momo, Chowmein, Sekuwa, Laphing)</li>
+            <li>International cuisine stalls (Tibetan, Korean, Continental snacks)</li>
+            <li>Dessert & beverage stalls (coffee, bubble tea, sweets)</li>
+            <li>Light live music and acoustic performances</li>
+            <li>Evening lighting setup and photo-friendly spaces</li>
+            <li>Maximum price per dish capped at NPR 500</li>
+            <li>Tourist-friendly seating and resting zones</li>
+            <li>Kids' activities and simple fun games</li>
+            <li>Local souvenir and handmade product stalls</li>
+            <li>Clean, hygienic food stalls with waste management</li>
+            <li>Security, volunteers, and first aid support</li>
+            <li>A calm, enjoyable festival experience for <strong>ALL AGES</strong></li>
+        </ul>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <button class="btn-buy-now" onclick="goToCheckout(4, 'Bouddha Food Fest')">Buy Tickets Now!!</button>
+    </section>
+
+    <script>
+        function goToCheckout(eventId, eventName) {
+            sessionStorage.setItem('eventId', eventId);
+            sessionStorage.setItem('eventName', eventName);
+            window.location.href = 'checkout-1.html';
+        }
+    </script>
+    <script src="/JS/auth-nav.js"></script>
+    <script src="/js/mobile-nav.js?v=1"></script>
+    <script src="/JS/bouddha-events.js"></script>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="/pictures/logo.png" alt="Food Jatra Logo">
+                </div>
+                <h2 class="footer-title">Food Jatra</h2>
+                <p class="footer-subtitle">Open daily 10 AM - 9 PM</p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Explore</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="/html/events.html">Events</a>
+                    <a class="footer-link" href="/html/about-us.html">About Us</a>
+                    <a class="footer-link" href="/html/contact-us.html">Contact Us</a>
+                    <a class="footer-link" href="/html/register.html">Register</a>
+                    <a class="footer-link" href="/html/login.html">Login</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Get Involved</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="/html/contact-us-vendor-sponsor.html">Become a Vendor</a>
+                    <a class="footer-link" href="/html/contact-us-vendor-sponsor.html">Become a Sponsor</a>
+                    <a class="footer-link" href="/html/volunteer.html">Volunteer</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact</h3>
+                <div class="footer-links">
+                    <span class="footer-link">+977 01-555-1234</span>
+                    <span class="footer-link">hello@foodjatra.com</span>
+                    <span class="footer-link">Kathmandu, Nepal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

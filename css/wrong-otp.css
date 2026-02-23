@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Tokyo_2097';
+    src: url('../fonts/Tokyo 2097.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Anton', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative circles */
+.decorative-circle {
+    position: fixed;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(16, 137, 211, 0.3), rgba(16, 137, 211, 0.05));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.circle-top-right {
+    width: 415px;
+    height: 415px;
+    top: -70px;
+    right: 0;
+    opacity: 0.1;
+}
+
+.circle-bottom-right {
+    width: 415px;
+    height: 415px;
+    bottom: -50px;
+    right: 0;
+    opacity: 0.1;
+}
+
+.circle-bottom-left {
+    width: 415px;
+    height: 415px;
+    bottom: -50px;
+    left: -19px;
+    opacity: 0.1;
+}
+
+.circle-inner {
+    width: 198px;
+    height: 198px;
+    top: -5px;
+    left: 46px;
+    opacity: 0.15;
+    position: absolute;
+}
+
+.error-container {
+    background: linear-gradient(to bottom, #f4f7fb 0%, #ffffff 100%);
+    border: 5px solid white;
+    border-radius: 40px;
+    max-width: 350px;
+    width: 90%;
+    padding: 50px 35px;
+    box-shadow: 0px 30px 30px -20px rgba(133, 189, 215, 0.88);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    text-align: center;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.error-title {
+    font-family: 'Tokyo_2097', sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+}
+
+.error-text {
+    color: red;
+}
+
+.retry-link {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color: #13a5d2;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.retry-link:hover {
+    color: #0d7fa0;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .error-container {
+        max-width: 330px;
+        padding: 45px 30px;
+    }
+
+    .error-title {
+        font-size: 26px;
+    }
+
+    .retry-link {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .error-container {
+        max-width: 310px;
+        padding: 40px 25px;
+    }
+
+    .error-title {
+        font-size: 24px;
+    }
+
+    .retry-link {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    .error-container {
+        max-width: 100%;
+        padding: 35px 20px;
+        border-radius: 30px;
+    }
+
+    .error-title {
+        font-size: 22px;
+    }
+
+    .retry-link {
+        font-size: 18px;
+    }
+
+    .decorative-circle {
+        display: none;
+    }
+}

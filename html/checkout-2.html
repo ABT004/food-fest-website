@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Billing Information</title>
+    <link rel="stylesheet" href="/css/checkout-2.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+            <img src="/pictures/food-jatra-logo.png" alt="Food Jatra Logo" class="logo">
+        </div>
+        <div class="nav-links">
+            <div class="events-dropdown" onclick="window.location.href='events.html'" style="cursor: pointer;">
+                <span>Events</span>
+                <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                    <path d="M1 1L6 6L11 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <a href="contact-us.html">Contact us</a>
+            <a href="about-us.html">About Us</a>
+        </div>
+        <div class="user-section">
+            <img src="/pictures/user-avatar.png" alt="User Avatar" class="user-avatar" onclick="window.location.href='profile-page.html'" style="cursor: pointer;">
+            <button class="btn-buy-ticket" onclick="window.location.href='checkout-1.html'">Buy Ticket</button>
+        </div>
+    </nav>
+
+
+    <main class="checkout-content">
+        <div class="checkout-wrapper">
+            <!-- Left Section: Billing Information -->
+            <div class="billing-section">
+                <div class="event-header">
+                    <h1>Checkout</h1>
+                    <h2 class="event-name">Tokha Fest</h2>
+                    <p class="event-date">18 & 19 January, 2026</p>
+                </div>
+
+                <!-- Billing Information 1 -->
+                <div class="billing-block">
+                    <h3 class="billing-title">Billing Information</h3>
+                    <p class="login-message" id="loginMessage"><span class="login-link" onclick="window.location.href='login.html'" style="cursor: pointer;">Log In</span> for a Faster Experience</p>
+                    <p class="required-note"><span class="asterisk">*</span>Required</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="firstName" placeholder="First Name *" required>
+                            <label>First Name<span class="asterisk">*</span></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="lastName" placeholder="Last Name *" required>
+                            <label>Last Name<span class="asterisk">*</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="email" placeholder="Email Address *" required>
+                            <label>Email Address<span class="asterisk">*</span></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="confirmEmail" placeholder="Alternative Email (Optional)" required>
+                            <label id="confirmEmailLabel">Alternative Email (for ticket delivery)</label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="eventUpdates" class="checkbox">
+                        <label for="eventUpdates" class="checkbox-label">Keep me updated on more events and news from this event organizer.</label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="eventEmails" class="checkbox">
+                        <label for="eventEmails" class="checkbox-label">Send me emails about the best events happening nearby or online.</label>
+                    </div>
+                </div>
+
+                <!-- Billing Information 2: Payment Methods -->
+                <div class="billing-block payment-methods">
+                    <h3 class="billing-title">Billing Information</h3>
+
+                    <div class="payment-option esewa-option">
+                        <img src="/pictures/esewa-logo.png" alt="Esewa" class="payment-logo">
+                        <span class="payment-name">E-sewa</span>
+                    </div>
+
+                    <div class="payment-option khalti-option">
+                        <img src="/pictures/khalti-logo.png" alt="Khalti" class="payment-logo">
+                        <span class="payment-name">Khalti</span>
+                    </div>
+                </div>
+
+
+                <p class="terms-text">By selecting Place Order, I agree to the FoodFest Terms of Service</p>
+
+
+                <button class="btn-place-order">Place Order</button>
+            </div>
+
+            <!-- Divider -->
+            <div class="vertical-divider"></div>
+
+            <!-- Right Section: Order Summary -->
+            <div class="summary-section">
+                <h1 class="summary-title">Order<br>Summary</h1>
+                
+                <div class="summary-content">
+                    <div class="summary-item">
+                        <span class="item-label">1 x VIP Ticket</span>
+                        <span class="item-price">2500</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="item-label">2 x Normal Ticket</span>
+                        <span class="item-price">1000</span>
+                    </div>
+                    
+                    <hr class="summary-divider">
+                    
+                    <div class="summary-item total">
+                        <span class="item-label">Total</span>
+                        <span class="item-price">3500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/JS/auth-nav.js?v=2"></script>
+    <script src="/js/mobile-nav.js?v=1"></script>
+    <script src="/JS/checkout-2.js?v=2"></script>
+</body>
+</html>

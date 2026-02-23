@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Food Jatra</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/volunteer.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/html/index.html" class="logo">
+                <img src="/pictures/logo.png" alt="Food Jatra Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/html/events.html">Events</a></li>
+                <li><a href="/html/contact-us.html">Contact Us</a></li>
+                <li><a href="/html/about-us.html">About Us</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login" onclick="window.location.href='/html/login.html'">Login</button>
+                <button class="btn-ticket" onclick="window.location.href='/html/events.html'">Buy Ticket</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="volunteer-hero">
+        <div class="volunteer-hero-content">
+            <h1 class="volunteer-title">Volunteer With Food Jatra</h1>
+            <p class="volunteer-subtitle">Join our team to help create the best food festival experience in Kathmandu.</p>
+        </div>
+    </main>
+
+    <section class="volunteer-section">
+        <div class="volunteer-card">
+            <h2 class="volunteer-form-title">Volunteer Application</h2>
+            <p class="volunteer-form-subtitle">Fill out the form and our team will get back to you.</p>
+
+            <form class="volunteer-form" action="/api/volunteer" method="post">
+                <div class="volunteer-grid">
+                    <div class="field">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+977 98xxxxxxxx" required>
+                    </div>
+                    <div class="field">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="16" max="80" placeholder="16+" required>
+                    </div>
+                    <div class="field">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Kathmandu" required>
+                    </div>
+                    <div class="field">
+                        <label for="availability">Availability Dates</label>
+                        <input type="text" id="availability" name="availability" placeholder="Jan 25 - Jan 28" required>
+                    </div>
+                    <div class="field">
+                        <label for="role">Preferred Role</label>
+                        <select id="role" name="role" required>
+                            <option value="" disabled selected>Select a role</option>
+                            <option value="welcome">Welcome Desk</option>
+                            <option value="crowd">Crowd Support</option>
+                            <option value="vendor">Vendor Assistance</option>
+                            <option value="clean">Clean Up</option>
+                            <option value="stage">Stage Support</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="shirtSize">T-Shirt Size</label>
+                        <select id="shirtSize" name="shirtSize" required>
+                            <option value="" disabled selected>Select size</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+                    </div>
+                    <div class="field field--full">
+                        <label for="experience">Relevant Experience</label>
+                        <textarea id="experience" name="experience" rows="4" placeholder="Tell us about any event or volunteer experience."></textarea>
+                    </div>
+                    <div class="field field--full">
+                        <label for="emergency">Emergency Contact</label>
+                        <input type="text" id="emergency" name="emergency" placeholder="Name and phone number" required>
+                    </div>
+                </div>
+
+                <div class="volunteer-consent">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I agree to be contacted about volunteering at Food Jatra.</label>
+                </div>
+
+                <button type="submit" class="btn-ticket volunteer-submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="/pictures/logo.png" alt="Food Jatra Logo">
+                </div>
+                <h2 class="footer-title">Food Jatra</h2>
+                <p class="footer-subtitle">Open daily 10 AM - 9 PM</p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Explore</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="/html/events.html">Events</a>
+                    <a class="footer-link" href="/html/about-us.html">About Us</a>
+                    <a class="footer-link" href="/html/contact-us.html">Contact Us</a>
+                    <a class="footer-link" href="/html/register.html">Register</a>
+                    <a class="footer-link" href="/html/login.html">Login</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Get Involved</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="/html/contact-us-vendor-sponsor.html">Become a Vendor</a>
+                    <a class="footer-link" href="/html/contact-us-vendor-sponsor.html">Become a Sponsor</a>
+                    <a class="footer-link" href="/html/volunteer.html">Volunteer</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact</h3>
+                <div class="footer-links">
+                    <span class="footer-link">+977 01-555-1234</span>
+                    <span class="footer-link">hello@foodjatra.com</span>
+                    <span class="footer-link">Kathmandu, Nepal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/auth-nav.js?v=2"></script>
+    <script src="/js/mobile-nav.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Cancel - Food Fest</title>
+    <link rel="stylesheet" href="/css/profile-cancel.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="/html/index.html" class="navbar-logo" style="text-decoration: none;">
+            <img src="/pictures/logo.png" alt="Food Jatra Logo" class="logo">
+        </a>
+        <div class="nav-links">
+            <a href="/html/events.html" class="events-dropdown" style="text-decoration: none;">
+                <span>Events</span>
+                <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                    <path d="M1 1L6 6L11 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <a href="/html/contact-us.html">Contact us</a>
+            <a href="/html/about-us.html">About Us</a>
+        </div>
+        <div class="user-section">
+            <a href="/html/profile-page.html">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%231089d3'/%3E%3Ccircle cx='50' cy='35' r='18' fill='white'/%3E%3Cpath d='M20 85 Q20 55 50 55 Q80 55 80 85 Z' fill='white'/%3E%3C/svg%3E" alt="User Avatar" class="user-avatar" id="navUserAvatar" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid #1089d3;">
+            </a>
+            <a href="/html/checkout-1.html" class="btn-buy-ticket" style="text-decoration: none;">Buy Ticket</a>
+        </div>
+    </nav>
+
+
+    <main class="profile-content">
+
+        <aside class="sidebar">
+            <h1 class="profile-heading">Profile</h1>
+            
+
+            <a href="/html/profile-page.html" class="menu-item" style="text-decoration: none;">
+                <span class="menu-icon">👤</span>
+                <span class="menu-text">My Account</span>
+            </a>
+            <a href="/html/profile-order.html" class="menu-item" style="text-decoration: none;">
+                <span class="menu-icon">📋</span>
+                <span class="menu-text">My Orders</span>
+            </a>
+            <a href="/html/profile-cancel.html" class="menu-item menu-active" style="text-decoration: none;">
+                <span class="menu-icon">✕</span>
+                <span class="menu-text">Returns/Cancel</span>
+            </a>
+            <a href="/html/profile-change-password.html" class="menu-item" style="text-decoration: none;">
+                <span class="menu-icon">✏️</span>
+                <span class="menu-text">Change Password</span>
+            </a>
+            <a href="#" class="menu-item" onclick="logout(); return false;" style="text-decoration: none;">
+                <span class="menu-icon">🚪</span>
+                <span class="menu-text">Logout</span>
+            </a>
+        </aside>
+
+        <!-- Content Area -->
+        <section class="profile-content-area">
+            <h2 class="content-heading">returns & cancel</h2>
+            
+            <!-- Divider Line -->
+            <div class="divider-line"></div>
+
+            <!-- Returns Table Header -->
+            <div class="returns-header">
+                <div class="header-cell location-cell">Location</div>
+                <div class="header-cell date-cell">Date</div>
+                <div class="header-cell status-cell payment">Payment</div>
+                <div class="header-cell status-cell tickets">Tickets</div>
+            </div>
+
+            <!-- Returns Table Row -->
+            <div class="returns-row">
+                <div class="row-cell location-cell">Basantapur, Kathmandu</div>
+                <div class="row-cell date-cell">2025/11/08</div>
+                <div class="row-cell status-cell payment">PAYMENT</div>
+                <div class="row-cell status-cell tickets">TICKETS</div>
+            </div>
+
+            <!-- Additional Rows (empty for now) -->
+            <div class="returns-row">
+                <div class="row-cell location-cell"></div>
+                <div class="row-cell date-cell"></div>
+                <div class="row-cell status-cell payment"></div>
+                <div class="row-cell status-cell tickets"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/auth-nav.js?v=2"></script>
+    <script src="/js/mobile-nav.js?v=1"></script>
+    <script src="/js/profile-page.js?v=2"></script>
+    <script src="/js/profile-cancel.js?v=2"></script>
+</body>
+</html>

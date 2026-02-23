@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Tokha Fest</title>
+    <link rel="stylesheet" href="/css/checkout-1.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+            <img src="/pictures/food-jatra-logo.png" alt="Food Jatra Logo" class="logo">
+        </div>
+        <div class="nav-links">
+            <div class="events-dropdown" onclick="window.location.href='events.html'" style="cursor: pointer;">
+                <span>Events</span>
+                <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                    <path d="M1 1L6 6L11 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <a href="contact-us.html">Contact us</a>
+            <a href="about-us.html">About Us</a>
+        </div>
+        <div class="user-section">
+            <img src="/pictures/user-avatar.png" alt="User Avatar" class="user-avatar" onclick="window.location.href='profile-page.html'" style="cursor: pointer;">
+            <button class="btn-buy-ticket" onclick="window.location.href='checkout-1.html'">Buy Ticket</button>
+        </div>
+    </nav>
+
+
+    <main class="checkout-content">
+        <div class="checkout-wrapper">
+
+            <div class="checkout-section">
+                <div class="event-header">
+                    <h1>Checkout</h1>
+                    <h2 class="event-name" id="eventNameDisplay">Tokha Fest</h2>
+                    <p class="event-date" id="eventDateDisplay">18 & 19 January, 2026</p>
+                </div>
+
+
+                <div class="ticket-box">
+                    <div class="ticket-header">
+                        <label class="ticket-title">VIP Tickets:</label>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity btn-minus" data-ticket="vip">−</button>
+                            <span class="quantity-display" id="vipQty">1</span>
+                            <button class="btn-quantity btn-plus" data-ticket="vip">+</button>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <div class="ticket-details">
+                        <p class="ticket-price">Rs. 2500/- Per Ticket</p>
+                        <p class="ticket-description">Including Entry Fee and Parking<br>Plus VIP Benefits</p>
+                    </div>
+                </div>
+
+                <!-- Normal Tickets Box -->
+                <div class="ticket-box">
+                    <div class="ticket-header">
+                        <label class="ticket-title">Normal Tickets:</label>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity btn-minus" data-ticket="normal">−</button>
+                            <span class="quantity-display" id="normalQty">2</span>
+                            <button class="btn-quantity btn-plus" data-ticket="normal">+</button>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <div class="ticket-details">
+                        <p class="ticket-price">Rs. 500/- Per Ticket</p>
+                        <p class="ticket-description">Includes Entry Fee<br>And Other Benefits</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="vertical-divider"></div>
+
+            <!-- Right Section: Order Summary -->
+            <div class="summary-section">
+                <h1 class="summary-title">Order<br>Summary</h1>
+                
+                <div class="summary-content">
+                    <div class="summary-item">
+                        <span class="item-label">1 x VIP Ticket</span>
+                        <span class="item-price">2500</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="item-label">2 x Normal Ticket</span>
+                        <span class="item-price">1000</span>
+                    </div>
+                    
+                    <hr class="summary-divider">
+                    
+                    <div class="summary-item total">
+                        <span class="item-label">Total</span>
+                        <span class="item-price">3500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Button -->
+        <button class="btn-checkout">Checkout</button>
+    </main>
+
+    <script src="/JS/auth-nav.js?v=2"></script>
+    <script src="/js/mobile-nav.js?v=1"></script>
+    <script src="/JS/checkout-1.js?v=2"></script>
+</body>
+</html>

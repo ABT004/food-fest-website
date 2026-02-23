@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokha Food Fest 2026</title>
+    <link rel="stylesheet" href="/css/tokha-events.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/html/index.html" class="logo">
+                <img src="/pictures/logo.png" alt="Food Jatra Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/html/events.html">Events</a></li>
+                <li><a href="/html/contact-us.html">Contact Us</a></li>
+                <li><a href="/html/about-us.html">About Us</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-ticket" onclick="window.location.href='/html/checkout-1.html'">Buy Ticket</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sliding Pictures -->
+    <section class="sliding-pictures">
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="slide"><img src="/pictures/1.jpg" alt="Food 1"></div>
+                <div class="slide"><img src="/pictures/2.jpg" alt="Food 2"></div>
+                <div class="slide"><img src="/pictures/3.jpg" alt="Food 3"></div>
+                <div class="slide"><img src="/pictures/4.jpg" alt="Food 4"></div>
+                <div class="slide"><img src="/pictures/5.jpg" alt="Food 5"></div>
+                <div class="slide"><img src="/pictures/1.jpg" alt="Food 1"></div>
+                <div class="slide"><img src="/pictures/2.jpg" alt="Food 2"></div>
+                <div class="slide"><img src="/pictures/3.jpg" alt="Food 3"></div>
+                <div class="slide"><img src="/pictures/4.jpg" alt="Food 4"></div>
+                <div class="slide"><img src="/pictures/5.jpg" alt="Food 5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <h1>Tokha Food Fest</h1>
+        <p class="location">Tokha, Kathmandu \ Near Bhootkhel Ground</p>
+        <p class="date">8th & 9th January, 2026</p>
+        <p class="time">1 PM to 9 PM</p>
+        <button class="btn-buy-now" onclick="goToCheckout(1, 'Tokha Food Fest')">Buy Tickets Now!!</button>
+    </section>
+
+    <!-- About the Festival -->
+    <section class="about-festival">
+        <h2>About the Festival</h2>
+        <p>
+            Tokha Food Fest is a community-driven celebration of food, culture, and local businesses. This year's festival brings together traditional Newari cuisine, popular street foods, live cultural performances, and family-friendly activities in the heart of Tokha. From mouth-watering local delicacies to exciting games and live entertainment, the festival promises an unforgettable experience for all age groups.
+        </p>
+    </section>
+
+    <!-- Ticket Options -->
+    <section class="ticket-section">
+        <h2>Ticket Option and Price</h2>
+        <div class="ticket-grid">
+            <div class="ticket-card">
+                <h3>VIP Ticket: Rs.2500</h3>
+                <ul>
+                    <li>2 Complementary Drinks.</li>
+                    <li>5 Food Coupons Worth 200 each.</li>
+                    <li>Free Parking.</li>
+                    <li>Entry Pass.</li>
+                </ul>
+            </div>
+            <div class="ticket-card">
+                <h3>Normal Ticket: Rs.500</h3>
+                <ul>
+                    <li>2 Food Coupons Worth 100 each.</li>
+                    <li>Entry Pass.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- All The Details -->
+    <section class="details-section">
+        <h2>All The Details</h2>
+        <h3>What to Expect</h3>
+        <ul class="details-list">
+            <li>Authentic Newari Foods (Yomari, Choila, Bara, Samay Baji)</li>
+            <li>Popular Street Foods (Momo, Tacos, New York-style Pizza)</li>
+            <li>Maximum price per dish capped at NPR 500</li>
+            <li>Live cultural performances & music</li>
+            <li>Mechanical bull ride</li>
+            <li>Kids fun zone (face painting, bouncy castles)</li>
+            <li>Carnival games & activities</li>
+            <li>Local vendors & handmade products</li>
+            <li>Fun & entertainment for <strong>ALL AGES</strong></li>
+        </ul>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <button class="btn-buy-now" onclick="goToCheckout(1, 'Tokha Food Fest')">Buy Tickets Now!!</button>
+    </section>
+
+    <script>
+        function goToCheckout(eventId, eventName) {
+            sessionStorage.setItem('eventId', eventId);
+            sessionStorage.setItem('eventName', eventName);
+            window.location.href = 'checkout-1.html';
+        }
+    </script>
+    <script src="/js/auth-nav.js"></script>
+    <script src="/js/mobile-nav.js?v=1"></script>
+    <script src="/js/tokha-events.js"></script>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="/pictures/logo.png" alt="Food Jatra Logo">
+                </div>
+                <h2 class="footer-title">Food Jatra</h2>
+                <p class="footer-subtitle">Open daily 10 AM - 9 PM</p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Explore</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="/html/events.html">Events</a>
+                    <a class="footer-link" href="/html/about-us.html">About Us</a>
+                    <a class="footer-link" href="/html/contact-us.html">Contact Us</a>
+                    <a class="footer-link" href="/html/register.html">Register</a>
+                    <a class="footer-link" href="/html/login.html">Login</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Get Involved</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="/html/contact-us-vendor-sponsor.html">Become a Vendor</a>
+                    <a class="footer-link" href="/html/contact-us-vendor-sponsor.html">Become a Sponsor</a>
+                    <a class="footer-link" href="/html/volunteer.html">Volunteer</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact</h3>
+                <div class="footer-links">
+                    <span class="footer-link">+977 01-555-1234</span>
+                    <span class="footer-link">hello@foodjatra.com</span>
+                    <span class="footer-link">Kathmandu, Nepal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

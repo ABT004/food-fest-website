@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Jatra - Food Festival Events</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/html/index.html" class="logo">
+                <img src="/pictures/logo.png" alt="Food Jatra Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/html/events.html">Events</a></li>
+                <li><a href="/html/contact-us.html">Contact Us</a></li>
+                <li><a href="/html/about-us.html">About Us</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login" onclick="window.location.href='/html/login.html'">Login</button>
+                <button class="btn-ticket" onclick="window.location.href='/html/checkout-1.html'">Buy Ticket</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="/videos/StreetFood.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Find The Best Food Festival Around You</h1>
+            <div class="hero-tags">
+                <span class="tag">Street Food</span>
+                <span class="tag-dot">•</span>
+                <span class="tag">Music</span>
+                <span class="tag-dot">•</span>
+                <span class="tag">Culture</span>
+            </div>
+            <div class="hero-cta">
+                <button class="btn-explore">Explore Fest</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="events events--tight-top" id="events">
+        <div class="section-title">
+            <span class="line"></span>
+            <h2>Upcoming Events</h2>
+            <span class="line"></span>
+        </div>
+
+        <div class="events-grid">
+            <div class="event-card">
+            <h3>Tokha<br><span>Kathmandu</span></h3>
+            <div class="event-date">08</div>
+            <div class="event-month">January, 2026</div>
+            <button class="btn-details" onclick="window.location.href='/html/tokha-events.html'">View Details</button>
+            </div>
+            <div class="event-card">
+            <h3>Tudikhel<br><span>Kathmandu</span></h3>
+            <div class="event-date">25</div>
+            <div class="event-month">January, 2026</div>
+            <button class="btn-details" onclick="window.location.href='/html/tudikhel-events.html'">View Details</button>
+            </div>
+            <div class="event-card">
+            <h3>Kritipur<br><span>Kathmandu</span></h3>
+            <div class="event-date">15</div>
+            <div class="event-month">February, 2026</div>
+            <button class="btn-details" onclick="window.location.href='/html/kritipur-events.html'">View Details</button>
+            </div>
+            <div class="event-card">
+            <h3>Boudha<br><span>Kathmandu</span></h3>
+            <div class="event-date">28</div>
+            <div class="event-month">February, 2026</div>
+            <button class="btn-details" onclick="window.location.href='/html/boudha-events.html'">View Details</button>
+            </div>
+        </div>
+
+        <div class="section-title section-title--spaced">
+            <span class="line"></span>
+            <h2>Previous Events</h2>
+            <span class="line"></span>
+        </div>
+
+        <div class="events-grid">
+            <div class="event-card">
+            <h3>Tokha<br><span>Kathmandu</span></h3>
+            <div class="event-date">08</div>
+            <div class="event-month">January, 2025</div>
+            <button class="btn-details-outline" onclick="window.location.href='/html/event-expired.html'">View Details</button>
+            </div>
+            <div class="event-card">
+            <h3>Jawalakhel<br><span>Lalitpur</span></h3>
+            <div class="event-date">30</div>
+            <div class="event-month">April, 2025</div>
+            <button class="btn-details-outline" onclick="window.location.href='/html/event-expired.html'">View Details</button>
+            </div>
+            <div class="event-card">
+            <h3>Durbar Square<br><span>Bhaktapur</span></h3>
+            <div class="event-date">05</div>
+            <div class="event-month">June, 2025</div>
+            <button class="btn-details-outline" onclick="window.location.href='/html/event-expired.html'">View Details</button>
+            </div>
+            <div class="event-card">
+            <h3>Basantapur<br><span>Kathmandu</span></h3>
+            <div class="event-date">12</div>
+            <div class="event-month">October, 2025</div>
+            <button class="btn-details-outline" onclick="window.location.href='/html/event-expired.html'">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="gallery-container">
+            <div class="gallery-track">
+                <div class="gallery-item">
+                    <img src="/pictures/1.jpg" alt="Food Gallery 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/pictures/2.jpg" alt="Food Gallery 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/pictures/3.jpg" alt="Food Gallery 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/pictures/4.jpg" alt="Food Gallery 4">
+                </div>
+                <!-- Duplicate items for infinite loop effect -->
+                <div class="gallery-item">
+                    <img src="/pictures/1.jpg" alt="Food Gallery 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/pictures/2.jpg" alt="Food Gallery 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/pictures/3.jpg" alt="Food Gallery 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/pictures/4.jpg" alt="Food Gallery 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="events events--compact">
+        <div class="section-title">
+            <span class="line"></span>
+            <h2>Festival Highlights</h2>
+            <span class="line"></span>
+        </div>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Top Chefs</h3>
+                <p>Live cooking demos, signature dishes, and tasting menus.</p>
+            </div>
+            <div class="event-card">
+                <h3>Live Music</h3>
+                <p>Local bands and DJs across multiple stages.</p>
+            </div>
+            <div class="event-card">
+                <h3>Family Zone</h3>
+                <p>Games, activities, and kid-friendly bites.</p>
+            </div>
+            <div class="event-card">
+                <h3>Street Bites</h3>
+                <p>Global street food with local flavors and spice.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="events events--compact">
+        <div class="section-title">
+            <span class="line"></span>
+            <h2>Featured Vendors</h2>
+            <span class="line"></span>
+        </div>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Newari Kitchen</h3>
+                <p>Traditional favorites with a modern twist.</p>
+            </div>
+            <div class="event-card">
+                <h3>Spice Route</h3>
+                <p>Bold, regional flavors from across Nepal.</p>
+            </div>
+            <div class="event-card">
+                <h3>Sweet Street</h3>
+                <p>Desserts, gelato, and festival treats.</p>
+            </div>
+            <div class="event-card">
+                <h3>Grill Yard</h3>
+                <p>Smoky skewers, burgers, and open-fire grills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="events events--tight">
+        <div class="section-title">
+            <span class="line"></span>
+            <h2>How It Works</h2>
+            <span class="line"></span>
+        </div>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Pick a Date</h3>
+                <p>Choose the city and day that fits your plan.</p>
+            </div>
+            <div class="event-card">
+                <h3>Buy a Pass</h3>
+                <p>Secure your ticket online in a few clicks.</p>
+            </div>
+            <div class="event-card">
+                <h3>Show Up</h3>
+                <p>Scan your pass at the gate and start exploring.</p>
+            </div>
+            <div class="event-card">
+                <h3>Taste More</h3>
+                <p>Use festival tokens to sample across vendors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="events events--tight">
+        <div class="section-title">
+            <span class="line"></span>
+            <h2>Festival Guidelines</h2>
+            <span class="line"></span>
+        </div>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Stay Hydrated</h3>
+                <p>Free water stations are available across the grounds.</p>
+            </div>
+            <div class="event-card">
+                <h3>Respect Lines</h3>
+                <p>Please queue fairly so everyone gets served quickly.</p>
+            </div>
+            <div class="event-card">
+                <h3>Keep It Clean</h3>
+                <p>Use bins and help us keep the venue tidy.</p>
+            </div>
+            <div class="event-card">
+                <h3>Cashless Payments</h3>
+                <p>Most vendors accept cards and mobile payments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="events events--tight">
+        <div class="section-title">
+            <span class="line"></span>
+            <h2>Frequently Asked Questions</h2>
+            <span class="line"></span>
+        </div>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>What are the entry timings?</h3>
+                <p>Gates open at 10 AM and close at 9 PM.</p>
+            </div>
+            <div class="event-card">
+                <h3>Are outside foods allowed?</h3>
+                <p>Outside food is not permitted, except baby food and medical needs.</p>
+            </div>
+            <div class="event-card">
+                <h3>Is parking available?</h3>
+                <p>Limited parking is available on a first-come, first-served basis.</p>
+            </div>
+            <div class="event-card">
+                <h3>Is this event family-friendly?</h3>
+                <p>Yes, there are kid-friendly zones and activities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="/pictures/logo.png" alt="Food Jatra Logo">
+                </div>
+                <h2 class="footer-title">Food Jatra</h2>
+                <p class="footer-subtitle">Open daily 10 AM - 9 PM</p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Explore</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="/html/events.html">Events</a>
+                    <a class="footer-link" href="/html/about-us.html">About Us</a>
+                    <a class="footer-link" href="/html/contact-us.html">Contact Us</a>
+                    <a class="footer-link" href="/html/register.html">Register</a>
+                    <a class="footer-link" href="/html/login.html">Login</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Get Involved</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="/html/contact-us-vendor-sponsor.html">Become a Vendor</a>
+                    <a class="footer-link" href="/html/contact-us-vendor-sponsor.html">Become a Sponsor</a>
+                    <a class="footer-link" href="/html/volunteer.html">Volunteer</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact</h3>
+                <div class="footer-links">
+                    <span class="footer-link">+977 01-555-1234</span>
+                    <span class="footer-link">hello@foodjatra.com</span>
+                    <span class="footer-link">Kathmandu, Nepal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/auth-nav.js?v=2"></script>
+    <script src="/js/mobile-nav.js?v=1"></script>
+    <script src="/js/index.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+@font-face {
+    font-family: 'Tokyo_2097';
+    src: url('../fonts/Tokyo 2097.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Tokyo_2097', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(16, 137, 211, 0.15), rgba(16, 137, 211, 0.03));
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::before {
+    width: 594px;
+    height: 594px;
+    top: 0;
+    left: 493px;
+    opacity: 0.3;
+}
+
+body::after {
+    width: 594px;
+    height: 594px;
+    bottom: -100px;
+    left: -101px;
+    opacity: 0.25;
+}
+
+
+.navbar {
+    background-color: transparent;
+    padding: 5px 0;
+    position: relative;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    flex: 1;
+    margin-left: 150px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 500;
+    font-family: 'Tokyo_2097', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #000000;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-ticket {
+    padding: 16px 54px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 3px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 49px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Tokyo_2097', sans-serif;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-ticket:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    margin: 0;
+}
+
+
+.contact-content {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 81px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 120px;
+}
+
+.contact-container {
+    background: linear-gradient(to bottom, #f4f7fb 0%, #ffffff 100%);
+    border: 5px solid white;
+    border-radius: 40px;
+    max-width: 380px;
+    width: 90%;
+    padding: 50px 35px;
+    box-shadow: 0px 30px 30px -20px rgba(133, 189, 215, 0.88);
+    position: relative;
+    overflow: hidden;
+}
+
+.decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(16, 137, 211, 0.3), rgba(16, 137, 211, 0.05));
+    pointer-events: none;
+    z-index: 0;
+    width: 258px;
+    height: 258px;
+    top: 140px;
+    left: 41px;
+    opacity: 0.15;
+}
+
+.contact-title {
+    font-family: 'Tokyo_2097', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    color: #1089d3;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+}
+
+.form-input {
+    width: 270px;
+    height: 45px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    color: #333;
+    box-shadow: 0px 10px 10px -5px #cff0ff;
+    transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+    color: #aaa;
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: 0px 10px 15px -5px #cff0ff;
+    background-color: #f9fffe;
+}
+
+.form-textarea {
+    width: 270px;
+    height: 220px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    color: #333;
+    box-shadow: 0px 10px 10px -5px #cff0ff;
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.form-textarea::placeholder {
+    color: #aaa;
+}
+
+.form-textarea:focus {
+    outline: none;
+    box-shadow: 0px 10px 15px -5px #cff0ff;
+    background-color: #f9fffe;
+}
+
+.btn-send {
+    width: 270px;
+    height: 45px;
+    margin: 10px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #1089d3 0%, #12b1d1 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 20px 10px -15px rgba(133, 189, 215, 0.88);
+    transition: all 0.3s ease;
+}
+
+.btn-send:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 25px 15px -15px rgba(133, 189, 215, 0.95);
+}
+
+.btn-send:active {
+    transform: translateY(0);
+    box-shadow: 0px 15px 8px -10px rgba(133, 189, 215, 0.8);
+}
+
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-menu .hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.mobile-menu .nav-links a {
+    padding: 15px 20px;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mobile-menu .user-section,
+.mobile-menu .nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px 20px;
+}
+
+.mobile-menu .btn-buy-ticket,
+.mobile-menu .btn-ticket,
+.mobile-menu .btn-login {
+    align-self: center;
+}
+
+
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0 60px;
+    }
+
+    .contact-content {
+        padding: 60px 60px;
+    }
+
+    .contact-container {
+        max-width: 360px;
+        padding: 45px 30px;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .btn-send {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        padding: 0 30px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+        padding: 40px 30px;
+    }
+
+    .contact-container {
+        max-width: 340px;
+        padding: 40px 25px;
+    }
+
+    .contact-title {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .btn-send {
+        width: 230px;
+        height: 42px;
+        font-size: 12px;
+    }
+
+    .form-textarea {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .btn-ticket {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .contact-content {
+        padding: 30px 20px;
+    }
+
+    .contact-container {
+        max-width: 100%;
+        padding: 35px 20px;
+        border-radius: 30px;
+    }
+
+    .contact-title {
+        font-size: 24px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .btn-send {
+        width: 100%;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .form-textarea {
+        height: 180px;
+    }
+
+    body::before,
+    body::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-logo,
+    .logo {
+        display: none;
+    }
+}

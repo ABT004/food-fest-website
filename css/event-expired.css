@@ -1,0 +1,400 @@
+/* ==========================================
+   FONT IMPORTS
+   ========================================== */
+
+@font-face {
+    font-family: 'Tokyo_2097';
+    src: url('../fonts/Tokyo 2097.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================
+   GENERAL STYLES
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tokyo_2097', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   NAVIGATION BAR
+   ========================================== */
+
+.navbar {
+    background-color: transparent;
+    padding: 15px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    flex: 1;
+    margin-left: 150px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 500;
+    font-family: 'Tokyo_2097', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #000000;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-login,
+.btn-ticket {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Tokyo_2097', sans-serif;
+    text-transform: uppercase;
+}
+
+.btn-login:hover,
+.btn-ticket:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   SLIDING PICTURES
+   ========================================== */
+
+.sliding-pictures {
+    padding-top: 120px;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    gap: 30px;
+    animation: slide 30s linear infinite;
+    padding: 0 30px;
+}
+
+.slide {
+    width: 420px;
+    height: 250px;
+    flex-shrink: 0;
+    background-color: #d9d9d9;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-420px * 5 - 30px * 5));
+    }
+}
+
+.slider-track:hover {
+    animation-play-state: paused;
+}
+
+/* ==========================================
+   MESSAGE SECTION
+   ========================================== */
+
+.message-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 120px;
+    min-height: 500px;
+}
+
+.message-section h1 {
+    font-size: 96px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.message-text {
+    font-size: 24px;
+    margin-bottom: 60px;
+    line-height: 1.6;
+}
+
+.btn-events {
+    background-color: #fbff00;
+    color: #000000;
+    border: none;
+    padding: 15px 50px;
+    font-size: 32px;
+    font-family: 'Anton', sans-serif;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-events:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(251, 255, 0, 0.3);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0 60px;
+    }
+
+    .message-section {
+        padding: 80px 60px;
+    }
+
+    .message-section h1 {
+        font-size: 64px;
+    }
+
+    .slide {
+        width: 350px;
+        height: 220px;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-350px * 5 - 30px * 5));
+        }
+    }
+}
+
+/* ==========================================
+   MOBILE NAVIGATION
+   ========================================== */
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    gap: 6px;
+    margin-right: 20px;
+}
+
+.hamburger-menu .hamburger-line {
+    width: 28px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px 0;
+    gap: 0;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.mobile-menu .nav-links a {
+    padding: 15px 20px;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.mobile-menu .nav-buttons button {
+    width: 100%;
+}
+
+.mobile-menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+        position: relative;
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .message-section {
+        padding: 60px 30px;
+    }
+
+    .message-section h1 {
+        font-size: 48px;
+    }
+
+    .message-text {
+        font-size: 18px;
+    }
+
+    .btn-events {
+        font-size: 24px;
+        padding: 12px 30px;
+    }
+
+    .slide {
+        width: 280px;
+        height: 200px;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-280px * 5 - 30px * 5));
+        }
+    }
+}

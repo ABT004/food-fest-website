@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Remove remaining comments",
+			"type": "shell",
+			"command": "find . -name \"*.js\" -type f -exec sed -i 's/^\\(\\s*\\)\\/\\/ .*$//' {} + && find . -name \"*.js\" -type f -exec sed -i 's/\\s*\\/\\/.*$//' {} +; echo 'Comments removal complete'"
+		}
+	]
+}

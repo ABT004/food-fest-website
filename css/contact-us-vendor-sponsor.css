@@ -1,0 +1,521 @@
+
+@font-face {
+    font-family: 'Tokyo_2097';
+    src: url('../fonts/Tokyo 2097.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf') format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Tokyo_2097', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    width: 594px;
+    height: 594px;
+    background: radial-gradient(circle, rgba(16, 137, 211, 0.15) 0%, rgba(16, 137, 211, 0.05) 70%, transparent 100%);
+    border-radius: 50%;
+    top: 591px;
+    left: -101px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    width: 594px;
+    height: 594px;
+    background: radial-gradient(circle, rgba(18, 177, 209, 0.15) 0%, rgba(18, 177, 209, 0.05) 70%, transparent 100%);
+    border-radius: 50%;
+    top: 0;
+    right: -101px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: relative;
+    z-index: 10;
+    height: 80px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-logo {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Tokyo_2097', sans-serif;
+    font-size: 21px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.btn-buy-ticket {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-family: 'Tokyo_2097', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-buy-ticket:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+
+.divider-line {
+    position: relative;
+    z-index: 5;
+    height: 1px;
+    background-color: #ddd;
+    margin: 0;
+}
+
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+
+.contact-container {
+    background: linear-gradient(to bottom, #f4f7fb 0%, #ffffff 100%);
+    border: 5px solid white;
+    border-radius: 40px;
+    max-width: 380px;
+    width: 90%;
+    padding: 50px 35px;
+    box-shadow: 0px 30px 30px -20px rgba(133, 189, 215, 0.88);
+    position: relative;
+    z-index: 3;
+}
+
+.contact-container::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(16, 137, 211, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 140px;
+    left: -50px;
+    z-index: 0;
+}
+
+
+.heading {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading h1 {
+    color: #1089d3;
+    font-size: 30px;
+    font-family: 'Tokyo_2097', sans-serif;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    color: black;
+    font-size: 16px;
+    font-family: 'Tokyo_2097', sans-serif;
+    margin: 0;
+    font-weight: normal;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.form-input,
+.form-textarea {
+    width: 270px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Tokyo_2097', sans-serif;
+    font-size: 13px;
+    box-shadow: 0px 10px 10px -5px #cff0ff;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    box-shadow: 0px 10px 15px -5px #12b1d1;
+    background-color: #fafbfc;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #aaa;
+}
+
+.form-input {
+    height: 45px;
+    margin: 5px auto;
+}
+
+.form-textarea {
+    height: 220px;
+    padding: 15px 20px;
+    resize: vertical;
+    max-height: 350px;
+    font-family: 'Tokyo_2097', sans-serif;
+    margin: 5px auto;
+}
+
+
+.btn-send {
+    width: 270px;
+    height: 45px;
+    margin: 20px auto 0;
+    background: linear-gradient(45deg, #1089d3 0%, #12b1d1 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Tokyo_2097', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 20px 10px -15px rgba(133, 189, 215, 0.88);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-send:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 25px 15px -10px rgba(133, 189, 215, 1);
+}
+
+.btn-send:active {
+    transform: translateY(-1px);
+}
+
+
+.contact-container::after {
+    content: '';
+    position: absolute;
+    width: 258px;
+    height: 258px;
+    background: radial-gradient(circle, rgba(16, 137, 211, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -100px;
+    right: -50px;
+    z-index: 0;
+}
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 0 80px;
+    }
+
+    .nav-links {
+        gap: 40px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .contact-container {
+        max-width: 350px;
+        padding: 40px 30px;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 250px;
+    }
+
+    .btn-send {
+        width: 250px;
+    }
+
+    .heading h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+}
+
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-menu .hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.mobile-menu .nav-links a {
+    padding: 15px 20px;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mobile-menu .user-section,
+.mobile-menu .nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px 20px;
+}
+
+.mobile-menu .btn-buy-ticket,
+.mobile-menu .btn-ticket,
+.mobile-menu .btn-login {
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 0 50px;
+        height: 70px;
+    }
+
+    .navbar-logo {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+
+    .contact-content {
+        min-height: calc(100vh - 70px);
+        padding: 40px 15px;
+    }
+
+    .contact-container {
+        max-width: 320px;
+        padding: 35px 25px;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 230px;
+    }
+
+    .btn-send {
+        width: 230px;
+    }
+
+    .heading h1 {
+        font-size: 24px;
+    }
+
+    .form-textarea {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 30px;
+        height: 60px;
+    }
+
+    .navbar-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .btn-buy-ticket {
+        padding: 8px 18px;
+        font-size: 11px;
+    }
+
+    .contact-content {
+        padding: 30px 10px;
+    }
+
+    .contact-container {
+        max-width: 90%;
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+    }
+
+    .btn-send {
+        width: 100%;
+    }
+
+    .heading h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .form-textarea {
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-logo,
+    .logo {
+        display: none;
+    }
+}

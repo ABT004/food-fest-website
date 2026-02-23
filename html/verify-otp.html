@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - Food Fest</title>
+    <link rel="stylesheet" href="/css/verify-otp.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+    <div class="verify-otp-wrapper">
+        <div class="verify-otp-container">
+            <div class="decorative-circle circle-top-left"></div>
+            
+            <h1 class="verify-otp-title">Verify OTP</h1>
+            <p class="verify-otp-subtitle" id="emailDisplay"></p>
+            
+            <div id="errorMessage" style="display: none; color: #ff4444; margin-bottom: 15px; text-align: center;"></div>
+            
+            <form class="verify-otp-form" id="verifyOtpForm">
+                <div class="form-group">
+                    <input type="text" class="form-input" id="otpInput" placeholder="Enter OTP (6-digit code)" required>
+                </div>
+                
+                <button type="submit" class="btn-verify-primary" id="verifyBtn">Verify OTP</button>
+            </form>
+            
+            <p class="resend-otp-text">
+                Didn't receive OTP? <a href="#" id="resendOtpLink">Resend OTP</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="/js/verify-otp.js"></script>
+</body>
+</html>

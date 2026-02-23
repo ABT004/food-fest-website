@@ -1,0 +1,139 @@
+body {
+    background-color: #ffffff;
+}
+
+.volunteer-hero {
+    height: 320px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../pictures/2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 40px;
+}
+
+.volunteer-hero-content {
+    color: #ffffff;
+}
+
+.volunteer-title {
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.volunteer-subtitle {
+    font-size: 18px;
+    color: #f2f2f2;
+}
+
+.volunteer-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 120px 100px;
+}
+
+.volunteer-card {
+    background-color: #f5f5f5;
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.volunteer-form-title {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.volunteer-form-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.volunteer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.volunteer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    padding: 12px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-family: 'Tokyo_2097', sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+.field--full {
+    grid-column: span 2;
+}
+
+.volunteer-consent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.volunteer-submit {
+    align-self: flex-start;
+    border-color: #000000;
+}
+
+@media (max-width: 1024px) {
+    .volunteer-section {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .volunteer-hero {
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .volunteer-section {
+        padding: 30px;
+    }
+
+    .volunteer-card {
+        padding: 30px;
+    }
+
+    .volunteer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .field--full {
+        grid-column: span 1;
+    }
+}
