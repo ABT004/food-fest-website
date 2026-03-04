@@ -74,6 +74,23 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var answer = this.nextElementSibling;
+        var isOpen = this.getAttribute('aria-expanded') === 'true';
+        // Close all open items
+        document.querySelectorAll('.faq-question').forEach(function(q) {
+            q.setAttribute('aria-expanded', 'false');
+            q.nextElementSibling.classList.remove('open');
+        });
+        // Toggle clicked item
+        if (!isOpen) {
+            this.setAttribute('aria-expanded', 'true');
+            answer.classList.add('open');
+        }
+    });
+});
+
 document.addEventListener('visibilitychange', function() {
     const track = document.querySelector('.gallery-track');
     if (track) {
