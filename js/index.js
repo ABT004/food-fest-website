@@ -85,4 +85,27 @@ document.addEventListener('visibilitychange', function() {
     }
 });
 
+// FAQ Accordion functionality
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', function() {
+        const faqId = this.getAttribute('data-faq');
+        const faqAnswer = document.getElementById('faq-' + faqId);
+        const isActive = faqAnswer.classList.contains('active');
+        
+        // Close all other open FAQs
+        document.querySelectorAll('.faq-answer.active').forEach(answer => {
+            answer.classList.remove('active');
+        });
+        document.querySelectorAll('.faq-question.active').forEach(q => {
+            q.classList.remove('active');
+        });
+        
+        // Toggle current FAQ
+        if (!isActive) {
+            faqAnswer.classList.add('active');
+            this.classList.add('active');
+        }
+    });
+});
+
 console.log('Food Fest Website with video and sliding gallery loaded successfully!');
